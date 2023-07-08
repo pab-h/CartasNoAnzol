@@ -10,4 +10,8 @@ public class Cliente {
 		this.socket = socket;
 	}
 	
+	public ClienteSocket getSocket() {
+		return this.socket;
+	}
+	
 }

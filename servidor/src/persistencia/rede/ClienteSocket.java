@@ -8,6 +8,8 @@ import java.io.PrintWriter;
 
 import java.net.Socket;
 
+import negocio.Eventos;
+
 public class ClienteSocket {
 
 	private PrintWriter escritor;
@@ -28,12 +30,14 @@ public class ClienteSocket {
 		
 	}
 	
-	public PrintWriter getEscritor() {
-		return this.escritor;
+	public void enviarEvento(Eventos evento, String dados) {
+		this.escritor.write(evento + "\n" + dados);
 	}
 	
-	public BufferedReader getLeitor() {
-		return this.leitor;
+	public void enviarEvento(Eventos evento) {
+		this.escritor.write(evento + "\n");
 	}
+	
+
 	
 }
