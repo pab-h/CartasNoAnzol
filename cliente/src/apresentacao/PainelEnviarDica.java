@@ -36,7 +36,7 @@ public class PainelEnviarDica extends JPanel{
 		
 		
 		painelEnviarDica.setPreferredSize((new Dimension(470, 37)));
-		painelEnviarDica.setBackground(Color.white);
+		painelEnviarDica.setBackground(new Color (216,191,216));
 		
 		painelEnviarDica.add(escreverDica);
 		painelEnviarDica.add(textField);

@@ -30,6 +30,7 @@ public class painelDaDica extends JPanel {
         painelDica.setBorder(new LineBorder(Color.black, 1));
         painelDica.add(dica);
         painelDica.add(dicaRecebida);
+        painelDica.setBackground(new Color(216,191,216));
         add(painelDica);
         
         

@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -20,13 +21,15 @@ public class PainelDasCartas extends JPanel {
 	
 	public PainelDasCartas(){
 		adicionarCartasAoPainel();
-	 
+		setBackground(new Color(230,230,250));
 	}
 
 	public void CartaUm() {
 		cartaUm = new JButton();
 		cartaUm.setPreferredSize(new Dimension(150, 200));
 		cartaUm.setBackground(Color.white);
+		ImageIcon icon = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\CORPSE BRIDE POLAROID POSTER.png");
+		cartaUm.setIcon(icon);
 		add(cartaUm);
 	}
 	
@@ -34,6 +37,8 @@ public class PainelDasCartas extends JPanel {
 		cartaDois = new JButton();
 		cartaDois.setPreferredSize(new Dimension(150, 200));
 		cartaDois.setBackground(Color.white);
+		ImageIcon icon = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\avengers_ endgame.jpg");
+		cartaDois.setIcon(icon);
 		add(cartaDois);
 		
 	}
@@ -42,6 +47,8 @@ public class PainelDasCartas extends JPanel {
 		cartaTres = new JButton();
 		cartaTres.setPreferredSize(new Dimension(150, 200));
 		cartaTres.setBackground(Color.white);
+		ImageIcon icon = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\Harry Potter & Philosophers Stone by Maja.jpg");
+		cartaTres.setIcon(icon);
 		add(cartaTres);
 
 	}
@@ -50,6 +57,8 @@ public class PainelDasCartas extends JPanel {
 		cartaQuatro = new JButton();
 		cartaQuatro.setPreferredSize(new Dimension(150, 200));
 		cartaQuatro.setBackground(Color.white);
+		ImageIcon icon = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\Sherk.jpg");
+		cartaQuatro.setIcon(icon);
 		add(cartaQuatro);
 
 	}
@@ -58,6 +67,8 @@ public class PainelDasCartas extends JPanel {
 		cartaCinco = new JButton();
 		cartaCinco.setPreferredSize(new Dimension(150, 200));
 		cartaCinco.setBackground(Color.white);
+		ImageIcon icon = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\Titanic by Maja.jpg");
+		cartaCinco.setIcon(icon);
 		add(cartaCinco);
 	}
 
@@ -65,6 +76,8 @@ public class PainelDasCartas extends JPanel {
 		cartaSeis = new JButton();
 		cartaSeis.setPreferredSize(new Dimension(150, 200));
 		cartaSeis.setBackground(Color.white);
+		ImageIcon icon = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\cars.jpg");
+		cartaSeis.setIcon(icon);
 		add(cartaSeis);
 	}
 	public void adicionarCartasAoPainel() {

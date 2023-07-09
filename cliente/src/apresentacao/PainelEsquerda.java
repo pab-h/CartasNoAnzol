@@ -1,6 +1,7 @@
 package apresentacao;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import javax.swing.JPanel;
 
 
@@ -17,6 +18,6 @@ public class PainelEsquerda extends JPanel{
 
 		PainelEnviarDica PED = new PainelEnviarDica();
 		add(PED, BorderLayout.SOUTH);
-
+		setBackground(new Color(230,230,250));
 	}
 }
