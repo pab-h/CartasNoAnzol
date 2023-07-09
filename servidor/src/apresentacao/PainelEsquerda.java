@@ -28,9 +28,9 @@ public class PainelEsquerda extends JPanel {
 		continuar = new JButton();
 		pausar = new JButton();
 		ImageIcon continuarIcon = new ImageIcon(
-				"C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\next.png");
+				"iconesServidor/next.png");
 		ImageIcon pausarIcon = new ImageIcon(
-				"C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\pause.png");
+				"iconesServidor/pause.png");
 		continuar.setIcon(continuarIcon);
 		pausar.setIcon(pausarIcon);
 		continuar.setBackground(Color.WHITE);

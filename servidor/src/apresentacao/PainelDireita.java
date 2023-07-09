@@ -31,9 +31,9 @@ public class PainelDireita extends JPanel {
 		numeroConectados = new JLabel("4");
 
 		ImageIcon imageStatus = new ImageIcon(
-				"C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\signal.png");
+				"iconesServidor/signal.png");
 		ImageIcon imageConectados = new ImageIcon(
-				"C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\wireless-router.png");
+				"iconesServidor/wireless-router.png");
 
 		JLabel labelStatusIcon = new JLabel(imageStatus);
 		JLabel labelConectadosIcon = new JLabel(imageConectados);

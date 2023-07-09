@@ -12,7 +12,7 @@ public class Janela extends JFrame {
 		this.setTitle("Cartas no Anzol");
 		this.setSize(850, 545);
 
-		ImageIcon icon = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\fish.png");
+		ImageIcon icon = new ImageIcon("icones/fish.png");
 		this.setIconImage(icon.getImage());
 		this.setLayout(new BorderLayout());
 		setResizable(false);
