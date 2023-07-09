@@ -16,4 +16,8 @@ public class Cliente {
 		return this.porta;
 	}
 	
+	public ClienteSocket getSocket() {
+		return this.socket;
+	}
+	
 }
