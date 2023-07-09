@@ -68,11 +68,11 @@ public class Servidor {
 		return true;
 	}
 	
-	public static Cliente sortearJogador(ArrayList<Cliente> clientes) {
-		Random random = new Random();
-		int idJogadorSorteado = random.nextInt(clientes.size());
-		return clientes.get(idJogadorSorteado);
-	}
+	//public static Cliente sortearJogador(ArrayList<Cliente> clientes) {
+		//Random random = new Random();
+		//int idJogadorSorteado = random.nextInt(clientes.size());
+		//return clientes.get(idJogadorSorteado);
+	//}
 	
 	public int getPorta() {
 		return this.porta;
