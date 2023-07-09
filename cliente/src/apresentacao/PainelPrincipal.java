@@ -15,7 +15,7 @@ public class PainelPrincipal extends JPanel{
 		
 		PainelEsquerda pe = new PainelEsquerda();
 		PainelDireita pd = new PainelDireita();
-		
+		setBackground(new Color(230,230,250));
 		add(pe, BorderLayout.WEST);
 		add(pd, BorderLayout.EAST);
 		

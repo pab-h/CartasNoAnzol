@@ -6,4 +6,5 @@
  *
  */
 module servidor {
+	requires java.desktop;
 }

@@ -46,6 +46,7 @@ public class PainelDoRanking extends JPanel{
 	public PainelDoRanking () {		
 		setLayout(new BorderLayout());		
 		adicionarTudo();	
+		setBackground(new Color(255,240,245));
 		
 	}
 	
@@ -60,6 +61,7 @@ public class PainelDoRanking extends JPanel{
 		painelRanking.add(ranking);	
 		painelRanking.setPreferredSize(new Dimension(300, 35));
 		painelRanking.add(label);
+		painelRanking.setBackground(new Color(255,240,245));
 		add(painelRanking);
 	
 	}
@@ -76,7 +78,7 @@ public class PainelDoRanking extends JPanel{
 	    painelJogadores.add(label);
 	    painelJogadores.add(jogadores);
 	    painelJogadores.add(pontuacao);
-	
+	    painelJogadores.setBackground(new Color(255,240,245));
 
 	    add(painelJogadores);
       }
@@ -92,6 +94,7 @@ public class PainelDoRanking extends JPanel{
 		 jogador1Panel.add(label);
 		 jogador1Panel.add(jogador1);
 		 jogador1Panel.add(pontos1);
+		 jogador1Panel.setBackground(new Color(255,240,245));
 		 add(jogador1Panel);
 		
 	}
@@ -106,6 +109,7 @@ public class PainelDoRanking extends JPanel{
 		 jogador2Pane2.add(label);
 		 jogador2Pane2.add(jogador2);
 		 jogador2Pane2.add(pontos2);
+		 jogador2Pane2.setBackground(new Color(255,240,245));
 		 add(jogador2Pane2);
 		
 	}
@@ -120,6 +124,7 @@ public class PainelDoRanking extends JPanel{
 		 jogador3Pane3.add(label);
 		 jogador3Pane3.add(jogador3);
 		 jogador3Pane3.add(pontos3);
+		 jogador3Pane3.setBackground(new Color(255,240,245));
 		 add(jogador3Pane3);
 		
 	}
@@ -134,6 +139,7 @@ public class PainelDoRanking extends JPanel{
 		 jogador4Pane4.add(label);
 		 jogador4Pane4.add(jogador4);
 		 jogador4Pane4.add(pontos4);
+		 jogador4Pane4.setBackground(new Color(255,240,245));
 		 add(jogador4Pane4);
 		
 	}
@@ -143,11 +149,13 @@ public class PainelDoRanking extends JPanel{
 		creditos = new JButton("Créditos");
 		botaoSair = new JButton("Sair");
 		sair.setLayout(new FlowLayout(FlowLayout.CENTER, 50, 20));
+		creditos.setBackground(new Color(255, 228, 225));
+		botaoSair.setBackground(new Color(255, 228, 225));
 		creditos.addActionListener(new creditosevento());
 		botaoSair.addActionListener(new sairEvento());
 		sair.add(creditos);
 		sair.add(botaoSair);
-		
+		sair.setBackground(new Color(255,240,245));
 		add(sair);
 			
 	}
