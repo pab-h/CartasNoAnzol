@@ -31,7 +31,7 @@ public class PainelMenu extends JPanel{
 	
 	public PainelMenu() {	
 		try {
-			imagemFundo = ImageIO.read(new File("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\zyro-image.png"));
+			imagemFundo = ImageIO.read(new File("icones/zyro-image.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -89,7 +89,7 @@ public class PainelMenu extends JPanel{
 	public class sairEvento implements ActionListener{	
 		public void actionPerformed(ActionEvent e) {
 			UIManager.put("Button.background", new Color(216,191,216));
-			ImageIcon aviso = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\exit.png");
+			ImageIcon aviso = new ImageIcon("icones/exit.png");
 			UIManager.put("OptionPane.questionIcon", aviso);
 
 			Object[] options = { "Sim", "Não" };
