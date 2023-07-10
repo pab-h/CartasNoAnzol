@@ -5,7 +5,6 @@ import java.util.Random;
 import persistencia.rede.ServidorThread;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Servidor {
@@ -19,13 +18,17 @@ public class Servidor {
 		this.clientes = new ArrayList<Cliente>();
 	}
 	
-	public static List<Integer> sortearCartas() {
-		List<Integer> ids = new ArrayList<>();
-		for (int i = 1; i <= 24; i++) {
-			ids.add(i);
+	public ArrayList<String> getIdsCartasCartas() {
+		
+		ArrayList<String> cartasSorteadas = new ArrayList<String>();
+		
+		Random sorteador = new Random();
+		
+		for(int i = 0; i < 6; i++) {
+			cartasSorteadas.add(String.valueOf(sorteador.nextInt(24)));
 		}
-		Collections.shuffle(ids);
-		return ids;
+		
+		return cartasSorteadas;
 	}
 
 	public static List<List<Integer>> agruparIds(List<Integer> ids) {
@@ -67,12 +70,7 @@ public class Servidor {
 		}
 		return true;
 	}
-	
-	//public static Cliente sortearJogador(ArrayList<Cliente> clientes) {
-		//Random random = new Random();
-		//int idJogadorSorteado = random.nextInt(clientes.size());
-		//return clientes.get(idJogadorSorteado);
-	//}
+
 	
 	public int getPorta() {
 		return this.porta;
@@ -80,10 +78,29 @@ public class Servidor {
 	
 	public void ouvir() {
 		this.thread.start();
+		
+		this.dinamicaDoJogo();
 	}
 	
 	public ArrayList<Cliente> getClientes() {
 		return this.clientes;
+	}
+	
+	public void dinamicaDoJogo() {
+		while(true) {
+			if (this.clientes.size() == 1) {
+				
+				for (Cliente cliente : this.clientes) {
+					cliente.getSocket().enviarMensagem(
+						Eventos.CARTAS_SORTEADAS, 
+						this.getIdsCartasCartas()
+					);
+					
+				}
+				
+				break;
+			}
+		}
 	}
 	
 }

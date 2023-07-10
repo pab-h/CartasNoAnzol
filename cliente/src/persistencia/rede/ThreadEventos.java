@@ -22,6 +22,7 @@ public class ThreadEventos extends Thread {
 			}
 			
 			if (mensagem.getEvento() == Eventos.CARTAS_SORTEADAS) {
+				System.out.println(mensagem.getDados());
 				this.cliente.adicionarCartas(mensagem.getDados());
 			}
 			

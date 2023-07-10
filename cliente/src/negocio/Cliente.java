@@ -3,6 +3,7 @@ package negocio;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import apresentacao.PainelDasCartas;
 import persistencia.DequeCartas;
 import persistencia.rede.ClienteSocket;
 
@@ -16,6 +17,10 @@ public class Cliente {
 		this.porta = porta;
 		this.socket = new ClienteSocket(this);
 		this.cartas = new ArrayList<Carta>();
+	}
+	
+	public void atualizarCartasNoPainel(PainelDasCartas painelDasCartas) {
+		painelDasCartas.exibirCartas(this.cartas);
 	}
 	
 	public void adicionarCartas(ArrayList<String> ids) {
