@@ -46,9 +46,8 @@ public class PainelEsquerda extends JPanel {
 
 		gbc.gridx = 1;
 		painelBotoes.add(pausar, gbc);
-		painelBotoes.setBackground(Color.black);
+		painelBotoes.setBackground(new Color(216,191,216));
 
 		add(painelBotoes, BorderLayout.CENTER);
-
 	}
 }

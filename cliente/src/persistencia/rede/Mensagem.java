@@ -1,4 +1,4 @@
-package persistencia;
+package persistencia.rede;
 
 import java.util.ArrayList;
 
