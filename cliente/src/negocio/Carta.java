@@ -1,18 +1,13 @@
 package negocio;
 
-import javax.swing.JButton;
-
-public class Carta extends JButton{
-	private int id;
+public class Carta{
+	private String caminho;
 	
-	public Carta() {
-		this.id = id;
-		
-		
+	public Carta(String caminho) {
+		this.caminho = caminho;
 	}
-
-	public int getId() {
-		return id;
+	
+	public String getCaminho() {
+		return this.caminho;
 	}
-
 }

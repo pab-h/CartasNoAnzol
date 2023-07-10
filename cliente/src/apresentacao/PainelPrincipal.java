@@ -19,6 +19,5 @@ public class PainelPrincipal extends JPanel{
 		add(pe, BorderLayout.WEST);
 		add(pd, BorderLayout.EAST);
 		
-		
 	}
 }

@@ -40,6 +40,10 @@ public class ClienteSocket {
 	}
 	
 	public Mensagem receberMensagem() {
+		if (!this.leitor.hasNextLine()) {
+			return null;
+		}
+		
 		Eventos evento = Eventos.valueOf(this.leitor.nextLine());
 		
 		ArrayList<String> dados = new ArrayList<String>();

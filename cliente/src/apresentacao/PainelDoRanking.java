@@ -57,7 +57,7 @@ public class PainelDoRanking extends JPanel{
 		ranking = new JLabel("RAKING");	
 		ranking.setFont(new Font("Open Sans", Font.BOLD, 20)); 
 		
-		JLabel label = (new JLabel(new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\troféu.png")));
+		JLabel label = (new JLabel(new ImageIcon("icones/troféu.png")));
 		painelRanking.add(ranking);	
 		painelRanking.setPreferredSize(new Dimension(300, 35));
 		painelRanking.add(label);
@@ -72,7 +72,7 @@ public class PainelDoRanking extends JPanel{
 
 	    painelJogadores = new JPanel();
 	    painelJogadores.setLayout(new FlowLayout(FlowLayout.CENTER, 50, 0)); // Espaçamento horizontal de 20 pixels
-	    JLabel label = (new JLabel(new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\winner.png")));
+	    JLabel label = (new JLabel(new ImageIcon("icones/winner.png")));
 	    jogadores = new JLabel("JOGADOR");
 	    pontuacao = new JLabel("PONTUAÇÃO");
 	    painelJogadores.add(label);
@@ -88,7 +88,7 @@ public class PainelDoRanking extends JPanel{
 		
 		 jogador1Panel = new JPanel();
 		 jogador1Panel.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 20));
-		 JLabel label = (new JLabel(new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\gamer.png")));
+		 JLabel label = (new JLabel(new ImageIcon("icones/gamer.png")));
 		 jogador1 = new JLabel("Jogador 1");
 		 pontos1 = new JLabel("0");
 		 jogador1Panel.add(label);
@@ -103,7 +103,7 @@ public class PainelDoRanking extends JPanel{
 		
 		 jogador2Pane2 = new JPanel();
 		 jogador2Pane2.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 20));
-		 JLabel label = (new JLabel(new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\gamer (1).png")));
+		 JLabel label = (new JLabel(new ImageIcon("icones/gamer (1).png")));
 		 jogador2 = new JLabel("Jogador 2");
 		 pontos2 = new JLabel("0");
 		 jogador2Pane2.add(label);
@@ -118,7 +118,7 @@ public class PainelDoRanking extends JPanel{
 		
 		 jogador3Pane3 = new JPanel();
 		 jogador3Pane3.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 20));
-		 JLabel label = (new JLabel(new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\gamer (2).png")));
+		 JLabel label = (new JLabel(new ImageIcon("icones/gamer (2).png")));
 		 jogador3 = new JLabel("Jogador 3");
 		 pontos3 = new JLabel("0");
 		 jogador3Pane3.add(label);
@@ -133,7 +133,7 @@ public class PainelDoRanking extends JPanel{
 		
 		 jogador4Pane4 = new JPanel();
 		 jogador4Pane4.setLayout(new FlowLayout(FlowLayout.CENTER, 100, 20));
-		 JLabel label = (new JLabel(new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\gamer (3).png")));
+		 JLabel label = (new JLabel(new ImageIcon("icones/gamer (3).png")));
 		 jogador4 = new JLabel("Jogador 4");
 		 pontos4 = new JLabel("0");
 		 jogador4Pane4.add(label);
@@ -163,10 +163,9 @@ public class PainelDoRanking extends JPanel{
 		public void actionPerformed(ActionEvent e) {
 
 			UIManager.put("Button.background", new Color(255, 228, 225));
-	        ImageIcon coding = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\coding.png");
+	        ImageIcon coding = new ImageIcon("icones/coding.png");
 	        
-	        String mensagem = "Antônio Lucas\n"
-	        				  +"Laisa Mireli\n" +
+	        String mensagem = "Laisa Mireli\n" +
 	        				  "Lara Vitória\n"+
 	                          "Pablo Hugo\n" ;
 	        JOptionPane.showMessageDialog(null, mensagem, "Criadores de Cartas no Anzol", JOptionPane.INFORMATION_MESSAGE, coding);
@@ -176,7 +175,7 @@ public class PainelDoRanking extends JPanel{
 	public class sairEvento implements ActionListener{	
 		public void actionPerformed(ActionEvent e) {
 			UIManager.put("Button.background", new Color(255, 228, 225));
-			ImageIcon aviso = new ImageIcon("C:\\Windows\\Temp\\ws-eclipse1\\modeloDeVizuzalizacao\\Icones\\exit.png");
+			ImageIcon aviso = new ImageIcon("icones/exit.png");
 			UIManager.put("OptionPane.questionIcon", aviso);
 
 			Object[] options = { "Sim", "Não" };
