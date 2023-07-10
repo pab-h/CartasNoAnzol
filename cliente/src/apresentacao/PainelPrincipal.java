@@ -18,6 +18,7 @@ public class PainelPrincipal extends JPanel{
 		setBackground(new Color(230,230,250));
 		add(pe, BorderLayout.WEST);
 		add(pd, BorderLayout.EAST);
+		setVisible(false);
 		
 	}
 }

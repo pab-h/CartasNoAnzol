@@ -90,8 +90,7 @@ public class PainelDasCartas extends JPanel {
 		    for (Carta carta : cartas) {
 		        JButton botaoCarta = new JButton(); 
 		        botaoCarta.setPreferredSize(new Dimension(150, 200)); 
-
-		      
+	      
 		        ImageIcon icon = new ImageIcon(carta.getCaminho()); 
 		        botaoCarta.setIcon(icon);
 
@@ -102,8 +101,7 @@ public class PainelDasCartas extends JPanel {
 	
 	public void adicionarCartasAoPainel() {
 		
-		JPanel painelCentral = new JPanel(new GridLayout(2, 3, 10, 10));
-		
+		JPanel painelCentral = new JPanel(new GridLayout(2, 3, 10, 10));		
 //		CartaUm();
 //		CartaDois();
 //		CartaTres();
