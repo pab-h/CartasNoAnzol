@@ -3,6 +3,7 @@ package negocio;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+import persistencia.DequeCartas;
 import persistencia.rede.ClienteSocket;
 
 public class Cliente {
