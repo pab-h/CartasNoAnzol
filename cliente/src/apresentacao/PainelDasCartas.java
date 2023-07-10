@@ -105,7 +105,7 @@ public class PainelDasCartas extends JPanel {
 		
 		JPanel painelCentral = new JPanel(new GridLayout(2, 3, 10, 10));		
 		
-		exibirCartas(null);
+//		exibirCartas(null);
 //		CartaUm();
 //		CartaDois();
 //		CartaTres();
