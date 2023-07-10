@@ -1,7 +1,8 @@
 package negocio;
 
-import persistencia.ClienteSocket;
 import java.util.ArrayList;
+
+import persistencia.rede.ClienteSocket;
 
 public class Cliente {
 

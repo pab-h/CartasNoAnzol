@@ -1,4 +1,4 @@
-package persistencia;
+package persistencia.rede;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,16 +15,19 @@ public class ClienteSocket {
 	
 	private PrintWriter escritor;
 	private Scanner leitor;
+	private Socket socket;
+	private ThreadEventos threadEventos;
 	
 	public ClienteSocket(Cliente cliente) {
+		this.threadEventos = new ThreadEventos(cliente);
 		
 		try {
-			Socket socket = new Socket("localhost", cliente.getPorta());
+			this.socket = new Socket("localhost", cliente.getPorta());
 			
-			OutputStream saida = socket.getOutputStream();
+			OutputStream saida = this.socket.getOutputStream();
 			this.escritor = new PrintWriter(saida, true);
 			
-			InputStream entrada = socket.getInputStream();
+			InputStream entrada = this.socket.getInputStream();
 			this.leitor = new Scanner(new InputStreamReader(entrada));
 			
 		} catch (Exception error) {
@@ -33,6 +36,12 @@ public class ClienteSocket {
 			error.printStackTrace();
 		}
 		
+		this.threadEventos.start();
+		
+	}
+	
+	public Socket getSocket() {
+		return this.socket;
 	}
 	
 	public void enviarMensagem(Eventos evento, ArrayList<String> dados) {

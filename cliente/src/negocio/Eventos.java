@@ -1,5 +1,5 @@
 package negocio;
 
 public enum Eventos {
-	TESTE
+	CARTAS_SORTEADAS
 }
