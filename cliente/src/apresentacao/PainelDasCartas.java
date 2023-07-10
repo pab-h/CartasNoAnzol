@@ -85,7 +85,9 @@ public class PainelDasCartas extends JPanel {
 //	}
 	
 	public void exibirCartas(ArrayList<Carta> cartas) {
-		
+	
+		 this.removeAll();
+		 
 		 JPanel painelCartas = new JPanel(new GridLayout(2, 3, 10, 10)); 
 		    for (Carta carta : cartas) {
 		        JButton botaoCarta = new JButton(); 
@@ -102,6 +104,8 @@ public class PainelDasCartas extends JPanel {
 	public void adicionarCartasAoPainel() {
 		
 		JPanel painelCentral = new JPanel(new GridLayout(2, 3, 10, 10));		
+		
+		exibirCartas(null);
 //		CartaUm();
 //		CartaDois();
 //		CartaTres();
