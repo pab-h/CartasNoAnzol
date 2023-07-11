@@ -1,6 +1,7 @@
 package apresentacao;
 
 import java.awt.BorderLayout;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -21,6 +22,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 
+import negocio.GerenciadorJogo;
+
 public class PainelMenu extends JPanel{
 	
 	private Image imagemFundo;
@@ -28,6 +31,7 @@ public class PainelMenu extends JPanel{
 	private JButton jogar;
 	private JButton sair;
 	private PainelPrincipal painelPrincipal;
+	private GerenciadorJogo gerenciadorJogo;
 	
 	public PainelMenu() {	
 		try {

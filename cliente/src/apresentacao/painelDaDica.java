@@ -22,7 +22,7 @@ public class painelDaDica extends JPanel {
     	this.setLayout(new FlowLayout());
         painelDica = new JPanel();
             
-        dica = new JLabel("Dica: ");
+        dica = new JLabel("Dica:");
         dicaRecebida = new JLabel("Palhaço dando um mortal");
         
         painelDica.setPreferredSize(new Dimension(470, 30));

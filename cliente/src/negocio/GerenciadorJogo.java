@@ -6,19 +6,20 @@ import java.awt.event.ActionListener;
 import apresentacao.*;
 
 public class GerenciadorJogo {
-	private PainelMenu painelMenu;
+	private PainelEsquerda painelEsquerda;
 	private painelDaDica painelDaDica;
 	private PainelEnviarDica painelEnviarDica;
 
-	public GerenciadorJogo(painelDaDica painelDaDica, PainelEnviarDica painelEnviarDica, PainelMenu painelMenu) {
+	public GerenciadorJogo(painelDaDica painelDaDica, PainelEnviarDica painelEnviarDica, PainelEsquerda painelEsquerda) {
 		this.painelDaDica = painelDaDica;
 		this.painelEnviarDica = painelEnviarDica;
-		this.painelMenu = painelMenu;
+		this.painelEsquerda = painelEsquerda;
 		
 		painelEnviarDica.getEnviar().addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				System.out.println("chamou");
 				atualizarDica();
 				
 			}
@@ -28,7 +29,8 @@ public class GerenciadorJogo {
 	
 	
 	public void atualizarDica() {
-		painelEnviarDica.getTextField().setText("Dica: " + String.valueOf(painelDaDica.getDicaRecebida()));
+		//painelEsquerda.getPED().getTextField().setText("Dica: " + String.valueOf(painelEsquerda.getPD().getDicaRecebida()));
+		painelDaDica.getDicaRecebida().setText(painelEnviarDica.getTextField().getText());
 		System.out.println("Enviou");
 	}
 }
