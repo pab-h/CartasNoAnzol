@@ -64,4 +64,30 @@ public class PainelEnviarDica extends JPanel{
 		enviar.setEnabled(textFieldPreenchido);
 	}
 
+	public JPanel getPainelEnviarDica() {
+		return painelEnviarDica;
+	}
+
+	public void setPainelEnviarDica(JPanel painelEnviarDica) {
+		this.painelEnviarDica = painelEnviarDica;
+	}
+
+	public JTextField getTextField() {
+		return textField;
+	}
+
+	public void setTextField(JTextField textField) {
+		this.textField = textField;
+	}
+
+	public JButton getEnviar() {
+		return enviar;
+	}
+
+	public void setEnviar(JButton enviar) {
+		this.enviar = enviar;
+	}
+	
+	
+
 }

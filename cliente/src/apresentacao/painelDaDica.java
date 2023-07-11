@@ -36,4 +36,12 @@ public class painelDaDica extends JPanel {
         
     }
 
+	public JLabel getDicaRecebida() {
+		return dicaRecebida;
+	}
+
+	public void setDicaRecebida(JLabel dicaRecebida) {
+		this.dicaRecebida = dicaRecebida;
+	}
+
 }
