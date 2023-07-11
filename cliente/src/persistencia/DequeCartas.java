@@ -23,7 +23,7 @@ public class DequeCartas {
                 if (Files.isRegularFile(arquivo)) {
                 	String caminho = "./cartas/" + arquivo.getFileName();
                 	
-                    this.cartas.add(new Carta(caminho));
+                    this.cartas.add(new Carta(caminho, 0, null));
                 }
             }
         } catch (Exception e) {
