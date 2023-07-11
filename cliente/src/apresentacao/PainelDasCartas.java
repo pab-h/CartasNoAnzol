@@ -105,6 +105,7 @@ public class PainelDasCartas extends JPanel {
 		
 		JPanel painelCentral = new JPanel(new GridLayout(2, 3, 10, 10));		
 		
+
 		CartaUm();
 		CartaDois();
 		CartaTres();
@@ -119,6 +120,23 @@ public class PainelDasCartas extends JPanel {
 		painelCentral.add(cartaCinco);
 		painelCentral.add(cartaSeis);
 		
+
+//		exibirCartas(null);
+//		CartaUm();
+//		CartaDois();
+//		CartaTres();
+//		CartaQuatro();
+//		CartaCinco();
+//		CartaSeis();
+//		
+//		painelCentral.add(cartaUm);
+//		painelCentral.add(cartaDois);
+//		painelCentral.add(cartaTres);
+//		painelCentral.add(cartaQuatro);
+//		painelCentral.add(cartaCinco);
+//		painelCentral.add(cartaSeis);
+//		
+
 		add(painelCentral, BorderLayout.CENTER);
 	}
 

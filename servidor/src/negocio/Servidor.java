@@ -11,6 +11,7 @@ public class Servidor {
 	private int porta; 
 	private ServidorThread thread;
 	private ArrayList<Cliente> clientes;
+	private Cliente cliente;
 	
 	public Servidor(int porta) {
 		this.porta = porta;
@@ -70,7 +71,12 @@ public class Servidor {
 		}
 		return true;
 	}
-
+	
+	public static Cliente sortearJogadorDaVez(List<Cliente> jogadores) {
+		Random random = new Random();
+		int jogadorSorteado = random.nextInt(jogadores.size());
+		return jogadores.get(jogadorSorteado);
+	}
 	
 	public int getPorta() {
 		return this.porta;
