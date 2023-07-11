@@ -8,27 +8,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Servidor {
-	private int porta; 
+	private int porta;
 	private ServidorThread thread;
 	private ArrayList<Cliente> clientes;
 	private Cliente cliente;
-	
+
 	public Servidor(int porta) {
 		this.porta = porta;
 		this.thread = new ServidorThread(this);
 		this.clientes = new ArrayList<Cliente>();
 	}
-	
+
 	public ArrayList<String> getIdsCartasCartas() {
-		
+
 		ArrayList<String> cartasSorteadas = new ArrayList<String>();
-		
+
 		Random sorteador = new Random();
-		
-		for(int i = 0; i < 6; i++) {
+
+		for (int i = 0; i < 6; i++) {
 			cartasSorteadas.add(String.valueOf(sorteador.nextInt(24)));
 		}
-		
+
 		return cartasSorteadas;
 	}
 
@@ -36,19 +36,19 @@ public class Servidor {
 		List<List<Integer>> deckPorJogador = new ArrayList<>();
 		int tamanhoDoDeck = 6;
 		int quantidadeDeck = 4;
-		
-		for (int i = 0; i < quantidadeDeck; i ++) {
+
+		for (int i = 0; i < quantidadeDeck; i++) {
 			deckPorJogador.add(new ArrayList<>());
 		}
-		
+
 		int deckVazio = 0;
 		for (Integer id : ids) {
 			deckPorJogador.get(deckVazio).add(id);
-			
+
 			if (deckPorJogador.get(deckVazio).size() >= tamanhoDoDeck)
 				deckVazio = (deckVazio + 1) % quantidadeDeck;
 		}
-		
+
 		return deckPorJogador;
 	}
 
@@ -59,9 +59,9 @@ public class Servidor {
 				List<Integer> outroDeck = deckPorJogador.get(i);
 				for (int k = 0; k < deck.size(); k++) {
 					Integer id = deck.get(k);
-					if(outroDeck.contains(id)) {
+					if (outroDeck.contains(id)) {
 						for (int l = 0; l < 24;) {
-							if(!deck.contains(l) && !outroDeck.contains(l))
+							if (!deck.contains(l) && !outroDeck.contains(l))
 								deck.set(k, l);
 							break;
 						}
@@ -71,42 +71,74 @@ public class Servidor {
 		}
 		return true;
 	}
-	
-	public static Cliente sortearJogadorDaVez(List<Cliente> jogadores) {
-		Random random = new Random();
-		int jogadorSorteado = random.nextInt(jogadores.size());
-		return jogadores.get(jogadorSorteado);
+
+	public ArrayList<String> sortearJogadorDaVez() {
+		ArrayList<String> clienteSorteado = new ArrayList<String>();
+
+		Random sortearJogador = new Random();
+		for (int i = 0; i < 4; i++) {
+			clienteSorteado.add(String.valueOf(sortearJogador.nextInt(4)));
+		}
+		return clienteSorteado;
 	}
-	
+
+	public ArrayList<String> enviarDicas() {
+		ArrayList<String> dica = new ArrayList<String>();
+
+		return dica;
+	}
+
 	public int getPorta() {
 		return this.porta;
 	}
-	
+
 	public void ouvir() {
 		this.thread.start();
-		
+
 		this.dinamicaDoJogo();
 	}
-	
+
 	public ArrayList<Cliente> getClientes() {
 		return this.clientes;
 	}
-	
+
 	public void dinamicaDoJogo() {
-		while(true) {
+		while (true) {
 			if (this.clientes.size() == 1) {
-				
+
 				for (Cliente cliente : this.clientes) {
-					cliente.getSocket().enviarMensagem(
-						Eventos.CARTAS_SORTEADAS, 
-						this.getIdsCartasCartas()
-					);
-					
+					cliente.getSocket().enviarMensagem(Eventos.CARTAS_SORTEADAS, this.getIdsCartasCartas());
+
 				}
-				
+
 				break;
 			}
 		}
 	}
-	
+
+	public void jogadorDaVez() {
+		while (true) {
+			if (this.clientes.size() == 1) {
+
+				for (Cliente cliente : this.clientes) {
+					cliente.getSocket().enviarMensagem(Eventos.JOGADOR_DA_VEZ, this.sortearJogadorDaVez());
+
+				}
+
+				break;
+			}
+		}
+	}
+
+	public void enviarDicasAosJogadores() {
+		while (true) {
+			if (this.clientes.size() == 1) {
+
+				for (Cliente cliente : this.clientes) {
+					cliente.getSocket().enviarMensagem(Eventos.DICA, this.enviarDicas());
+				}
+				break;
+			}
+		}
+	}
 }
