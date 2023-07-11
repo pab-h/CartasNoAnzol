@@ -34,4 +34,11 @@ public class painelDaDica extends JPanel {
         add(painelDica); 
     }
 
+	public JPanel getPainelDica() {
+		return painelDica;
+	}
+
+	public void setPainelDica(JPanel painelDica) {
+		this.painelDica = painelDica;
+	}
 }

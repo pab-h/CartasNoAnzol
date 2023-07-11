@@ -121,4 +121,13 @@ public class PainelDasCartas extends JPanel {
 		
 		add(painelCentral, BorderLayout.CENTER);
 	}
+
+	public JPanel getPainelCartas() {
+		return painelCartas;
+	}
+
+	public void setPainelCartas(JPanel painelCartas) {
+		this.painelCartas = painelCartas;
+	}
+	
 }
